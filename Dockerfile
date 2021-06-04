@@ -1,4 +1,4 @@
-FROM python:3.7-buster
+FROM python:buster
 
 RUN apt-get update && apt-get -yq install \
     gettext \
@@ -14,6 +14,8 @@ RUN apt-get update && apt-get -yq install \
     python3-osc-placement \
     python3-openstackclient \
     python3-pankoclient \
+    python3-swiftclient \
+    python3-keystoneclient \
     zip \
   && rm -rf /var/lib/apt/lists/*
 
